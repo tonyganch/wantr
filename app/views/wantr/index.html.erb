@@ -1,0 +1,11 @@
+<h1><%= @user['name'] %></h1>
+<%= raw(@wishes['intro']) %>
+
+<% @wishes['wishes'].each do |category, wishes| %>
+    <h2><%= category %></h2>
+    <ul>
+        <% wishes.each do |wish| %>
+            <li><%= wish['title'] %></li>
+        <% end %>
+    </ul>
+<% end %>
